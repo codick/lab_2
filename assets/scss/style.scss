@@ -1,0 +1,515 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url('../fonts/RobotoSlab-Regular.ttf');
+}
+
+$font1: 'Roboto';
+
+body{
+    font-family: $font1;
+}
+
+a, li, ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+// Header
+
+.container{
+    width: 100%;
+    height: 60px;
+}
+
+.header{
+    &__wrap{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #373A3C;
+        border-bottom: rgb(132, 132, 132) 3px solid;
+    }
+    &__logo{
+        padding: 11px 0;
+    }
+    &__menu{
+        display: flex;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        margin-right: 30px;
+    }
+    &__link {
+        font-family: $font1;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.3);
+    }
+    &__burger{
+        display: none;
+    
+        @media (max-width:850px) {
+            display: flex;
+            padding-right: 10px; 
+            padding-left: 10px; 
+        }
+    }
+    &__link:hover {
+        color: #FFFFFF;
+    }
+    &__arrow::after {
+        content: "";
+        background: url("../img/down-arrow.svg") no-repeat bottom;
+        width: 12px;
+        height: 7px;
+        margin-left: 8px;
+        margin-top: 4px;
+        display: flex;
+      }
+    &__registration__user::before {
+        content: "";
+        background: url("../img/user.svg") no-repeat bottom;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        margin-right: 5px;
+      }
+    &__input {
+        border-radius: 4px;
+        padding: 10px 70px 10px 15px;
+        color: black;
+        border: none;
+      }
+    &__search{
+        width: 210px;
+        height: 38px;
+        background: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        border-radius: 4px;
+    }
+    &__search::placeholder{
+        position: relative;
+        left: 12px;
+    }
+}
+
+// First Section
+
+.first{
+    align-items: center;
+    height: 698px;
+    display: flex;
+    background: url('../img/STAR-WARS_2.png');        
+    background-position:top;
+    background-size: cover;
+    position: relative;
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left__arrow{
+        position: absolute;
+        left: 0px;
+        margin-left: 49px;
+        padding-right: 49px;
+        @media (max-width:512px) {
+            padding: 0px 15px;
+
+        }
+    }
+    &__right__arrow{
+        position: absolute;
+        right: 0px;
+        padding-right: 49px;
+        @media (max-width:512px) {
+            padding: 0px 15px;    
+            }
+        }
+    &__buttons-titles{
+        font-family:$font1;
+        color: #FFFFFF;
+        position: absolute;
+        top:210px;
+        left: 59.36%;
+    }
+    &__title{
+        font-size: 36px;
+        line-height: 42px;
+        @media (max-width:500px) {
+            position: absolute;
+            font-size:30px;
+            line-height: 38px;
+            top: 40px;
+            width: 156px;
+            left: -28px
+        }
+    }
+     &__subtitle{
+        font-size: 24px;
+        line-height: 28px;
+        @media (max-width:500px) {
+            position: absolute;
+            font-size:18px;
+            line-height: 22px;
+            top: 90px;
+            width: 156px;
+            left: -28px
+        }
+        }
+    &__buttons{
+        display: inline-block;
+        flex-direction: row;
+        position: absolute;
+        top:200px;
+        width: 330px;
+        @media (max-width:797px) {
+            position:absolute;
+            right:-120px;
+                
+        }
+        @media (max-width:512px) {
+            position:absolute;
+            right:-127px;
+                
+        }
+    }
+    &__button{
+        background: #8DD83D;
+        border-radius: 4px;
+        padding: 8px 20px;
+        border: 0px;
+        font-family: $font1;
+        font-size: 16px;
+        line-height: 21px;
+        color: #FFFFFF;
+    }
+    &__button2{
+        margin-left: 13px;
+        background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+        border-radius: 4px;
+        padding: 8px 20px;
+        border: 0px;
+        font-family: $font1;
+        font-size: 16px;
+        line-height: 21px;
+        color: #FFFFFF; 
+    }
+}
+
+// First Section end
+
+// Second Section
+
+.btn{
+    background: #8DD83D;
+    border-radius: 4px;
+    width: 278px;
+    padding: 20px 0;
+}
+
+.second{
+    height: 700px;
+    background: #373A3C;
+    width: 100%; 
+    padding: 100px 0;
+    &__wrap{
+        background: #373A3C;
+    }
+        &__img{
+            display: flex;
+            justify-content: center;
+        }
+        &__block{
+            padding-top: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &__title{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 56px;
+                color: #FFFFFF;
+            }
+            &__subtitle{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 42px;
+                color: #FFFFFF;
+            }
+        }
+        &__cards{
+        padding-top: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 160px;
+        @media (max-width: 1345px){
+            flex-direction: column;
+        }
+        }
+        &__column {
+        padding: 0 64px;
+            @media (max-width:1345px){
+                margin-top: 40px;
+            }
+        }
+        &__item {
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.03);
+        border-radius: 10px;
+        box-sizing: border-box;
+        background: #FFFFFF;
+        border: 1px solid #8DD83D;
+        border-radius: 4px;
+        width: 320px;
+        height: 420px;
+    }
+        &__logo {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        &__title {
+        color: #435766;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        margin-top: 22px;
+    }
+        &__subtitle{
+            color: #435766;
+            padding-left: 22px;
+            max-width: 260px;
+        }
+        &__buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 40px;
+        }
+        &__btn{
+            border: none;
+            margin-bottom: 189px;
+            color: #FFFFFF;
+        }
+        &__subtitle__card3{
+            margin-bottom: 20px;
+        }
+}
+
+/* Third */
+
+.third{
+    padding-top: 120px;
+    padding-bottom: 145px;
+    background: url(../img/playstation.png) no-repeat center center/ cover;
+}
+
+.third__wrap{
+}
+
+.third__title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;   
+}
+
+.third__text{
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.third__buttons{
+    display: flex;
+}
+
+.third__button{
+    padding: 20px 50px;
+    margin-top: 39px;
+}
+
+.third__button:not(:last-of-type){
+    margin-right: 40px;
+}
+
+
+// Registration Section
+
+.registration{
+    font-family: 'Roboto';
+    width: 100%;
+}
+.registration__wrapper{
+    margin: 0 auto;
+    width: 300px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.registration__title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #979797;
+    margin-bottom: 25px;
+}
+.registration__form{
+    display: flex;
+    flex-direction: column;
+}
+.registration__form__name{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px 2px rgba(0, 29, 108, 0.07);
+    border-radius: 5px;
+    width: 220px;
+    height: 40px;
+    border: 0;
+    margin-bottom: 15px;
+    padding: 0px 0px 0px 12px;
+}
+.registration__form__surname{
+    width: 220px;
+    height: 40px;
+    border: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px 2px rgba(0, 29, 108, 0.07);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 0px 0px 0px 12px;
+}
+.registration__form__email{
+    width: 220px;
+    height: 40px;
+    padding: 0 0 0 12px;
+    border: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px 2px rgba(0, 29, 108, 0.07);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.registration__form__password{
+    width: 220px;
+    height: 40px;
+    padding: 0 0 0 12px;
+    border: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px 2px rgba(0, 29, 108, 0.07);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.registration__form__btn{
+    width: 232px;
+    height: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: #FDFDFF;
+    background: #8DD83D;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration__form__logIn{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.5);
+}
+
+// Section Footer
+
+.footer{
+    background: #373A3C;
+    height: 395px;
+    &__column__first{
+        margin-left: 20px;
+        font-family: $font1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        font-family: $font1;
+        color:  #7DD42F;
+        margin-top: 50px;
+    }
+    &__subtitle{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        margin-top: 35px;
+    }
+    &__column__second{
+        font-family: $font1;
+        display: flex;
+        flex-direction: column;
+        padding-left: 300px;
+    }
+    &__column__third{
+        font-family: $font1;
+        display: flex;
+        flex-direction: column;
+        padding-left: 300px;
+    }
+    &__block{
+        display: flex;
+    }
+    &__images{
+        margin-top: 30px;
+    }
+    &__image{
+        margin-right: 30px;
+    }
+    &__text{
+        margin-top: 50px;
+        font-family:$font1;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        padding: 22px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-top:1px solid #FFFFFF
+
+    }
+
+}
